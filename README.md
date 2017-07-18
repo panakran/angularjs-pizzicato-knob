@@ -1,22 +1,25 @@
-# Jquery knob + Angular + Pizzicato
+# Jquery knob + AngularJS + Pizzicato
+---
+
+## installation notes (node.js required)
+
+In current directory run:
+```
+npm install
+npm start
+```
 
 ## How to use
 
-### Add 
+example
 
-```
-<div class="well well-lg" song="songfile">       
-    <div filter="filter name"></div>            
+
+```html
+<div class="well well-lg" song="nirv.mp3">
+    <div class="well well-lg" filter="quadrafuzz"></div>
 </div>
-``` 
-where songfile= yourfilename (placed in /songs folder)
-where filter name the filter to apply on start up
+```
+ 
+- songfile= "yourfilename (placed in /songs folder)"
+- filter= "filter to apply on start up"
 
-### install (node.js required)
-
-In current directory run:
-
-``` 
-npm install
-npm start
-``` 

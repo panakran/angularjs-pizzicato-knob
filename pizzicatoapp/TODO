@@ -1,5 +1,6 @@
-- npm package
-- maybe upload songs 
-- move song knobs to postlink
-- templating for filter directive
-- intpolate to make templates and fix how we add elements
+## TODOS
+
+- npm package: done
+- upload more songs 
+- fix some filter values to work properly
+- interpolate to make templates and fix how we add elements
