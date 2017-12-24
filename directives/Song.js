@@ -24,13 +24,15 @@ angular.module('songModule', [])
             };
         })
         .controller('SongController', function ($scope, $element, $compile, $q) {
-            $scope.toggleval = true;
+            
     
 
             $scope.loadSong = function () {
                 console.log("Loading song");
-                $q.all($scope.openSong()).then(
-                        function () {
+                $scope.openSong().then(
+                        function (data) {
+                            $scope.songFile = data;
+                            $scope.toggleval = true;
                         });
             };
 
@@ -39,12 +41,12 @@ angular.module('songModule', [])
                 var deferred = $q.defer();
 
                 console.log("Loading song to resolve", $scope.songName);
-                $scope.songFile = new Pizzicato.Sound({
+                var songFile = new Pizzicato.Sound({
                     source: 'file',
                     options: {path: ['./songs/' + $scope.songName]}//+$scope.songName TODO
 
                 });
-                deferred.resolve($scope.songFile);
+                deferred.resolve(songFile);
                 console.log("Returning resolved ", deferred);
 
                 return deferred.promise;

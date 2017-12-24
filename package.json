@@ -5,17 +5,19 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
-    "start": "node server.js"
+    "start": "browser-sync start --server --files"
   },
   "author": "panosx",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
     "bootstrap": "^3.3.7",
-    "express": "^4.15.3",
     "jquery": "^3.2.1",
     "jquery-knob": "^1.2.11",
     "lodash": "^4.17.4",
     "pizzicato": "^0.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.21.0"
   }
 }

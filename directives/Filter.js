@@ -1,5 +1,5 @@
 angular.module('filterModule', [])
-.directive('filter', function (lodash, $compile, dataService) {
+.directive('filter', function ($compile, dataService) {
 
     return{
 
