@@ -3,6 +3,7 @@ angular.module('songModule', [])
 
             return{
 
+                restrict: 'E',
                 templateUrl: "templates/song.html",
                 controller: "SongController",
                 scope: true,
@@ -71,7 +72,7 @@ angular.module('songModule', [])
                 $scope.songFile.stop();
             };
             $scope.addFilter = function (filter) {
-                var elem = $compile(angular.element("<div class=\"well well-lg\" filter=\"" + filter + "\"></div>"))($scope);
+                var elem = $compile(angular.element("<filter class=\"well well-lg\" filter=\"" + filter + "\"></filter>"))($scope);
                 console.log("song.addFilter()", filter);
                 $element.append(elem);
             };

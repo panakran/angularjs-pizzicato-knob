@@ -4,6 +4,7 @@ angular.module('filterModule', [])
     return{
 
         templateUrl: "templates/filter.html",
+        restrict:'E',
         controller: "FilterController",
         scope: true,
         link: {
